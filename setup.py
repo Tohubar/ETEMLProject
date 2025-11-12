@@ -5,5 +5,5 @@ setup(
     version= "0.0.0",
     author= "Tohubar",
     author_email= "hossaintohubar@gmail.com",
-    packages= find_packages()
+    packages=  find_packages()
 )
