@@ -1,6 +1,5 @@
-from US_VISA import logger
+from US_VISA.pipline.training_pipeline import TrainingPipline
 
-try:
-    a = 1/0
-except ZeroDivisionError as e:
-    logger.logging.error(e)
+pipline = TrainingPipline()
+
+pipline.run_pipline()
