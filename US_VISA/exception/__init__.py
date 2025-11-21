@@ -8,10 +8,10 @@ def error_message_details(error, error_details: sys):
     return err_message
 
 class UsVisaException(Exception):
-    def __init__(self, error_message, error_detail: sys):
-        super().__init__(error_message)
+    def __init__(self, error, error_detail: sys):
+        super().__init__(error)
 
-        self.err_msg =  error_message_details(error_message, error_detail)
+        self.err_msg =  error_message_details(error, error_detail)
 
     def __str__(self):
         return self.err_msg

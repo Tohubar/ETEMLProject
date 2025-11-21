@@ -2,8 +2,8 @@ import os, sys
 import yaml, dill
 import numpy as np
 import pandas as pd
-from exception import UsVisaException
-from logger import logging
+from US_VISA.exception import UsVisaException
+from US_VISA.logger import logging
 
 
 def read_yaml(filepath: str) -> dict:

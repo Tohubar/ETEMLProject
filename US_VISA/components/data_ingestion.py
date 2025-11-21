@@ -42,8 +42,8 @@ class DataIngestion:
             os.makedirs(ingested_dir, exist_ok= True)
             
             logging.info("Saving splited data into train and test file")
-            train_df.to_csv(self.data_ingestion_config.training_file_path)
-            test_df.to_csv(self.data_ingestion_config.testing_file_path)
+            train_df.to_csv(self.data_ingestion_config.training_file_path, index= False, header= True)
+            test_df.to_csv(self.data_ingestion_config.testing_file_path, index= False, header= True)
 
             logging.info("Completed tha tastk")
         except Exception as e:

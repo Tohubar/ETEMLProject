@@ -20,7 +20,7 @@ class FetchMongoDbData:
             collection = self.database[collection_name]
             df = pd.DataFrame(list(collection.find()))
             if '_id' in df.columns.to_list():
-                df.drop('_id', inplace= True, axis= 1)
+                df = df.drop('_id', axis= 1)
             df.replace({'na': np.nan}, inplace= True)
             logging.info("Collections are exorted as DataFrame")
             return df
